@@ -3,15 +3,27 @@
     autoplay-delay = "2500"
     autoplay-disable-on-interaction = "false"
     effect = "fade">
-    <swiper-slide>
-        <img src="assets/images/bg-1.jpg" alt="banner image" class="banner-image"/>
+    @for (img of listImages; track img){ <!-- Looping data -->
+      <swiper-slide>
+        <img [src]="img" alt="banner image" class="banner-image"/>
     </swiper-slide>
-    <swiper-slide>
+    } @empty { <!-- Kalau data tidak kebaca / kosong -->
+      <swiper-slide>
+        <h1>Data Kosong</h1>
+    </swiper-slide>
+    }
+
+    <!-- <swiper-slide *ngFor="let img of listImages">
+        <img [src]="img" alt="banner image" class="banner-image"/>
+    </swiper-slide> -->
+
+    <!-- <swiper-slide>
       <img src="assets/images/bg-2.jpg" alt="banner image" class="banner-image"/>
     </swiper-slide>
     <swiper-slide>
       <img src="assets/images/bg-3.jpg" alt="banner image" class="banner-image"/>
-    </swiper-slide>
+    </swiper-slide> -->
+
   </swiper-container>
   <div class="banner-overlay">
     <div class="banner-layer"></div>
