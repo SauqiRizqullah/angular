@@ -3,11 +3,14 @@ import { CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { title } from 'process';
 import { SwiperContainer } from 'swiper/element';
+import { DateFormatPipe } from '@pipes/date-format.pipe';
+
 @Component({
   selector: 'app-news',
   standalone: true,
   imports: [
-    MatButtonModule
+    MatButtonModule,
+    DateFormatPipe
   ],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css',
