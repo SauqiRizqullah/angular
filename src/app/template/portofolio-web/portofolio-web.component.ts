@@ -6,6 +6,7 @@ import { AboutUsComponent } from '@components/portofolio-web/about-us/about-us.c
 import { NewsComponent } from '@components/portofolio-web/news/news.component';
 import { AchievementComponent } from '@components/portofolio-web/achievement/achievement.component';
 import { privateDecrypt } from 'crypto';
+import { TestimonialComponent } from '@components/portofolio-web/testimonial/testimonial.component';
 
 @Component({
   selector: 'app-portofolio-web',
@@ -15,7 +16,8 @@ import { privateDecrypt } from 'crypto';
     HeaderMenuComponent,
     AboutUsComponent,
     NewsComponent,
-    AchievementComponent
+    AchievementComponent,
+    TestimonialComponent
   ],
   templateUrl: './portofolio-web.component.html',
   styleUrl: './portofolio-web.component.css'
